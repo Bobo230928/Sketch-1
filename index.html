@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio Website Wireframes</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      background: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 32px 20px 48px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      text-align: center;
+      font-size: 1.7rem;
+    }
+
+    .intro {
+      max-width: 680px;
+      margin: 0 auto 32px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .wireframes {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .wireframe {
+      width: min(100%, 680px);
+      margin: 0;
+    }
+
+    .wireframe figcaption {
+      margin-bottom: 12px;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .canvas {
+      border: 2px solid #111;
+      padding: 12px;
+      background: #fff;
+    }
+
+    .block {
+      border: 1px solid #111;
+      padding: 12px;
+    }
+
+    .block + .block {
+      margin-top: 10px;
+    }
+
+    .block-title {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .placeholder {
+      min-height: 14px;
+      margin-top: 7px;
+      border: 1px solid #111;
+    }
+
+    .placeholder.short {
+      width: 58%;
+    }
+
+    .placeholder.medium {
+      width: 78%;
+    }
+
+    .placeholder.image {
+      min-height: 90px;
+    }
+
+    .mobile {
+      width: min(100%, 310px);
+    }
+
+    .mobile .canvas {
+      padding: 10px;
+    }
+
+    .mobile .block {
+      padding: 10px;
+    }
+
+    .mobile .placeholder.image {
+      min-height: 110px;
+    }
+
+    .mobile-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .menu-button {
+      display: grid;
+      width: 34px;
+      height: 30px;
+      align-content: center;
+      gap: 4px;
+      padding: 5px;
+      border: 1px solid #111;
+    }
+
+    .menu-button span {
+      display: block;
+      height: 1px;
+      background: #111;
+    }
+
+    .desktop-header,
+    .desktop-nav,
+    .project-grid,
+    .lower-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .desktop-header {
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+    }
+
+    .desktop-nav {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .desktop-nav .block-title {
+      grid-column: 1 / -1;
+      margin-bottom: 0;
+    }
+
+    .desktop-nav div {
+      padding: 8px 4px;
+      border: 1px solid #111;
+      text-align: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .project-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .project-grid .block {
+      min-width: 0;
+    }
+
+    .project-grid .placeholder.image {
+      min-height: 100px;
+    }
+
+    .lower-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .skills-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+    }
+
+    .skills-list div {
+      min-height: 26px;
+      border: 1px solid #111;
+      padding: 5px;
+      text-align: center;
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding-inline: 14px;
+      }
+
+      .desktop {
+        width: 100%;
+      }
+
+      .desktop .canvas {
+        overflow-x: auto;
+      }
+
+      .desktop-layout {
+        min-width: 520px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portfolio Website Wireframes</h1>
+    <p class="intro">Low-fidelity layout sketches showing how the portfolio adapts from a narrow mobile screen to a large desktop screen.</p>
+  </header>
+
+  <main class="wireframes">
+    <figure class="wireframe mobile">
+      <figcaption>Mobile View</figcaption>
+      <div class="canvas">
+        <header class="block mobile-header">
+          <div>
+            <span class="block-title">Header</span>
+            <div class="placeholder short" aria-label="Name or logo placeholder"></div>
+          </div>
+          <div class="menu-button" aria-label="Menu button placeholder">
+            <span></span><span></span><span></span>
+          </div>
+        </header>
+
+        <section class="block" aria-label="About Me section">
+          <span class="block-title">About Me</span>
+          <div class="placeholder medium" aria-label="Introduction heading placeholder"></div>
+          <div class="placeholder" aria-label="Introduction text placeholder"></div>
+          <div class="placeholder short" aria-label="Introduction text placeholder"></div>
+        </section>
+
+        <section class="block" aria-label="Portfolio section">
+          <span class="block-title">Portfolio</span>
+          <article>
+            <div class="placeholder image" aria-label="Project image placeholder"></div>
+            <div class="placeholder medium" aria-label="Project title placeholder"></div>
+          </article>
+          <article>
+            <div class="placeholder image" aria-label="Project image placeholder"></div>
+            <div class="placeholder medium" aria-label="Project title placeholder"></div>
+          </article>
+        </section>
+
+        <section class="block" aria-label="Skills section">
+          <span class="block-title">Skills</span>
+          <div class="placeholder"></div>
+          <div class="placeholder"></div>
+          <div class="placeholder short"></div>
+        </section>
+
+        <section class="block" aria-label="Contact section">
+          <span class="block-title">Contact</span>
+          <div class="placeholder medium" aria-label="Contact information placeholder"></div>
+          <div class="placeholder" aria-label="Contact form placeholder"></div>
+        </section>
+      </div>
+    </figure>
+
+    <figure class="wireframe desktop">
+      <figcaption>Desktop / Large Screen View</figcaption>
+      <div class="canvas">
+        <div class="desktop-layout">
+          <header class="block desktop-header">
+            <div>
+              <span class="block-title">Header</span>
+              <div class="placeholder medium" aria-label="Name or logo placeholder"></div>
+            </div>
+            <nav class="desktop-nav" aria-label="Navigation">
+              <span class="block-title">Navigation</span>
+              <div>About Me</div>
+              <div>Portfolio</div>
+              <div>Skills</div>
+              <div>Contact</div>
+            </nav>
+          </header>
+
+          <section class="block" aria-label="About Me section">
+            <span class="block-title">About Me</span>
+            <div class="placeholder medium" aria-label="Introduction heading placeholder"></div>
+            <div class="placeholder" aria-label="Introduction text placeholder"></div>
+            <div class="placeholder" aria-label="Introduction text placeholder"></div>
+            <div class="placeholder short" aria-label="Introduction text placeholder"></div>
+          </section>
+
+          <section class="block" aria-label="Portfolio section">
+            <span class="block-title">Portfolio</span>
+            <div class="project-grid">
+              <article class="block">
+                <div class="placeholder image" aria-label="Project one image placeholder"></div>
+                <div class="placeholder medium" aria-label="Project one title placeholder"></div>
+              </article>
+              <article class="block">
+                <div class="placeholder image" aria-label="Project two image placeholder"></div>
+                <div class="placeholder medium" aria-label="Project two title placeholder"></div>
+              </article>
+              <article class="block">
+                <div class="placeholder image" aria-label="Project three image placeholder"></div>
+                <div class="placeholder medium" aria-label="Project three title placeholder"></div>
+              </article>
+            </div>
+          </section>
+
+          <div class="lower-grid">
+            <section class="block" aria-label="Skills section">
+              <span class="block-title">Skills</span>
+              <div class="skills-list">
+                <div>Skill</div><div>Skill</div>
+                <div>Skill</div><div>Skill</div>
+              </div>
+            </section>
+            <section class="block" aria-label="Contact section">
+              <span class="block-title">Contact</span>
+              <div class="placeholder medium" aria-label="Contact information placeholder"></div>
+              <div class="placeholder" aria-label="Contact form placeholder"></div>
+              <div class="placeholder short" aria-label="Contact button placeholder"></div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </figure>
+  </main>
+</body>
+</html>
